@@ -1,5 +1,5 @@
-import { Menu } from "./header-submodules/Menu";
-import Logo from "./header-submodules/Logo";
+import { Menu } from './header-submodules/Menu'
+import Logo from './header-submodules/Logo'
 
 export default function Header() {
   return (

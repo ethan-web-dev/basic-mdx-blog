@@ -125,7 +125,7 @@ function Menu() {
       );
     } else {
       return ( /* --- Desktop Menu --- */
-        <nav className="">
+        <nav className="flex gap-5">
           <Links 
             activeRoute='hidden' 
             className="" 
