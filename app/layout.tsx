@@ -1,11 +1,14 @@
+import Header from './components/layout/header/Header'
 import './globals.css'
-import Navbar from './components/Navbar'
 import type { Metadata } from 'next'
+import { ScreenWidthProvider } from './providers/MutOnScreenWidthProvider'
+import { NextThemeProvider } from './providers/NextThemeProvider'
+import Footer from './components/layout/footer/Footer'
 
 
 export const metadata: Metadata = {
-  title: "Dave's Blog",
-  description: 'Created by Dave Gray',
+  title: "Eb Blog",
+  description: 'A MDX based blog built with Next.js',
 }
 
 export default function RootLayout({
@@ -14,12 +17,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="dark:bg-slate-800">
-        <Navbar />
-        <main className="px-4 md:px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
-          {children}
-        </main>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body>
+        <ScreenWidthProvider>
+          <NextThemeProvider>
+            <Header />
+              <main className="min-h-screen">
+                {children}
+              </main>
+            <Footer />
+          </NextThemeProvider>
+        </ScreenWidthProvider>
       </body>
     </html>
   )

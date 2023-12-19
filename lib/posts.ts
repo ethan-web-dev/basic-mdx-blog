@@ -2,8 +2,8 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib'
 import rehypeHighlight from 'rehype-highlight/lib'
 import rehypeSlug from 'rehype-slug'
-import Video from '@/app/components/Video'
-import CustomImage from '@/app/components/CustomImage'
+import Video from '@/app/components/reusable/Video'
+import CustomImage from '@/app/components/reusable/CustomImage'
 
 type Filetree = {
     "tree": [

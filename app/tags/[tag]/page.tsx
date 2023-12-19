@@ -1,5 +1,5 @@
 import { getPostsMeta } from "@/lib/posts"
-import ListItem from "@/app/components/ListItem"
+import ListItem from "@/app/components/blog/ListItem"
 import Link from "next/link"
 
 export const revalidate = 86400
