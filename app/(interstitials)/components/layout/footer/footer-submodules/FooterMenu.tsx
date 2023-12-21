@@ -10,14 +10,42 @@ const blogLinks = [
     label: 'How I built this site'
   },
   {
-    href: '/posts/choosing-a-tech-stack',
-    key: 'cts',
-    label: 'Choosing a tech stack'
+    href: '/posts/how-software-is-built',
+    key: 'hsb',
+    label: 'How Software is Built'
   },
   {
-    href: 'posts/what-is-coding',
+    href: '/posts/how-to-become-a-developer',
+    key: 'hbd',
+    label: 'How to become a Developer'
+  },
+  {
+    href: '/posts/math-in-programming',
+    key: 'mip',
+    label: 'Math in Programming'
+  }
+];
+
+const faqLinks = [
+  {
+    href: '/posts/what-is-coding',
     key: 'wic',
-    label: 'What is coding'
+    label: 'What is Coding?'
+  },
+  {
+    href: '/posts/what-is-a-programming-language',
+    key: 'wpl',
+    label: 'What is a Programming Language?'
+  },
+  {
+    href: '/posts/what-is-a-framework',
+    key: 'waf',
+    label: 'What is a Framework?'
+  },
+  {
+    href: '/posts/what-is-a-tech-stack',
+    key: 'wits',
+    label: 'What is a Tech Stack?'
   }
 ];
 
@@ -39,6 +67,13 @@ export default function FooterMenu() {
           <li key={link.key}>
             <Link href={link.href}>{link.label}</Link>
           </li>    
+        ))}
+      </ul>
+      <ul className={listStyle}>
+        {faqLinks.map((link) => (
+          <li key={link.key}>
+            <Link href={link.href}>{link.label}</Link>
+          </li>
         ))}
       </ul>
     </section>
