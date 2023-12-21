@@ -3,32 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { linkData } from '../../linkData'
 import { useScreenWidth } from '../../../../helpers/mutOnScreenWidth'
 import { disableScroll, enableScroll } from '../../../../helpers/lockScroll'
-
-interface LinkData {
-  href: string;
-  key: string;
-  label: string;
-}
-
-const linksData: LinkData[] = [
-  { 
-    href: '/', 
-    key: 'home', 
-    label: 'Home' 
-  },
-  { 
-    href: '/about', 
-    key: 'about', 
-    label: 'About'
-  },
-  {
-    href: '/articles',
-    key: 'articles',
-    label: 'Articles'
-  }
-];
 
 function Links({
   activeRoute, 
@@ -42,7 +19,7 @@ function Links({
   const pathname = usePathname();
 
   // If condition activeRoute equals 'hidden', then allLinks contains the linksData array filtered to exclude the link matching the current pathname. Otherwise, allLinks contains the original linksData array.
-  const allLinkPermutations = activeRoute === 'hidden' ? linksData.filter(link => link.href !== pathname) : linksData;
+  const allLinkPermutations = activeRoute === 'hidden' ? linkData.filter(link => link.href !== pathname) : linkData;
 
   // onClick handler to allow link click functionality to be exposed to parent components
   const handleLinkClick = () => {
@@ -103,25 +80,27 @@ function Menu() {
   const renderMenu = () => {
     if (windowWidth <= 640) {
       return ( /* --- Mobile Menu --- */
-        <div>
+        <>
           {isMobileMenuOpen && ( // Content is only seen if the mobile menu toggle is clicked
-            <nav className="fixed z-10 inset-0 h-full w-full flex justify-center place-items-center">
-              <div className="flex flex-col">
-                <Links 
-                  activeRoute='visible' 
-                  className=""
-                  linkClicked={handleMobileLinkClick}
-                />
+            <nav className="z-30 fixed inset-0 bg-primary dark:bg-secondary">
+              <div className="flex items-center justify-center w-full h-screen">
+                <div className="flex flex-col w-fit">
+                  <Links 
+                    activeRoute='visible' 
+                    className="w-fit"
+                    linkClicked={handleMobileLinkClick}
+                  />
+                </div>
               </div>
             </nav>
           )}
           <button 
-            className={isMobileMenuOpen ? "z-50 absolute right-0 bottom-0" : "z-50" } 
+            className="z-50"
             onClick={isMobileMenuOpen ? mobileMenuClosed : mobileMenuOpen }
           >
-            {isMobileMenuOpen ? 'Click to Close' : 'Click to Open' }
+            {isMobileMenuOpen ? 'Menu' : 'Menu' }
           </button>  
-        </div>
+        </>
       );
     } else {
       return ( /* --- Desktop Menu --- */
@@ -147,7 +126,7 @@ function Menu() {
   return renderMenu(); 
 }
 
-export { Menu };
+export default Menu
 
 /* 
 - Holds links (data stored in array c/o kvp) - done 

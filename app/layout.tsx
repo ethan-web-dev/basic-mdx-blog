@@ -17,11 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body>
+      <body className="bg-primary text-secondary dark:bg-secondary dark:text-primary">
         <ScreenWidthProvider>
           <NextThemeProvider>
             <Header />
-              <main className="min-h-screen">
+              <main className="min-h-screen pt-2 sm:pt-24 px-2 md:mx-[10%]">
                 {children}
               </main>
             <Footer />

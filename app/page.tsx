@@ -1,10 +1,10 @@
-import ThemeSwitch from './components/reusable/ThemeSwitch'
+import LorenzAttractor from './components/maths/LorenzAttractor'
 
 export default function Home() {
   return (
     <article>
       <p>Home</p>
-      <ThemeSwitch />
+      <LorenzAttractor />
     </article>
   )
 }
