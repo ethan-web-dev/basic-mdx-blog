@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-import LogoImage from '../../../../../public/eb-logo-chromium-no-bg.svg'
-import LogoImageDark from '../../../../../public/eb-logo-chromium-no-bg-dark.svg'
+import LogoImage from '../../../../../../public/eb-logo-chromium-no-bg.svg'
+import LogoImageDark from '../../../../../../public/eb-logo-chromium-no-bg-dark.svg'
 
 export default function Logo() {
   const { resolvedTheme } = useTheme();

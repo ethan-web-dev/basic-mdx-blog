@@ -1,4 +1,4 @@
-import { Tabs } from '../components/reusable/Tabs'
+import { Tabs } from '../(interstitials)/components/reusable/Tabs'
 
 const tabData = [
   { label: 'Tab 1', content: 'Content for Tab 1' },

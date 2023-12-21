@@ -21,8 +21,8 @@ export const linkData: LinksData[] = [
     label: 'Articles'
   },
   {
-    href: '/models',
-    key: 'models',
-    label: 'Models'
+    href: '/showcase',
+    key: 'showcase',
+    label: 'Showcase'
   }
 ];

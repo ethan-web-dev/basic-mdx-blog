@@ -1,4 +1,4 @@
-import ThemeSwitchSelect from '@/app/components/reusable/ThemeSwitchSelect'
+import ThemeSwitchSelect from '@/app/(interstitials)/components/reusable/ThemeSwitchSelect'
 
 export default function FooterBorder() {
   return (

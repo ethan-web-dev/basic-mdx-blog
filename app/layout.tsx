@@ -1,9 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { ScreenWidthProvider } from './providers/MutOnScreenWidthProvider'
-import { NextThemeProvider } from './providers/NextThemeProvider'
-import Header from './components/layout/header/Header'
-import Footer from './components/layout/footer/Footer'
+import { ScreenWidthProvider } from './(interstitials)/providers/MutOnScreenWidthProvider'
+import { NextThemeProvider } from './(interstitials)/providers/NextThemeProvider'
+import Header from './(interstitials)/components/layout/header/Header'
+import Footer from './(interstitials)/components/layout/footer/Footer'
 
 export const metadata: Metadata = {
   title: "Eb Blog",

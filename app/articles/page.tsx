@@ -1,4 +1,4 @@
-import Posts from '../components/blog/Posts'
+import Posts from '../(interstitials)/components/blog/Posts'
 
 export const revalidate = 86400
 
