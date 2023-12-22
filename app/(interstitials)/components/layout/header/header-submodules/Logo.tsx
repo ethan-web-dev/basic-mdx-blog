@@ -42,8 +42,8 @@ export default function Logo() {
           priority={true} 
           src={src} 
         />
-        <h3>
-          Ethan <b>Beeler</b>
+        <h3 className="text-lg">
+          <span className="font-extralight">Ethan</span> <b>Beeler</b>
         </h3>
       </Link>
     </>

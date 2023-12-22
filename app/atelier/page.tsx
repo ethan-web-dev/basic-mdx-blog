@@ -1,4 +1,4 @@
-export default function Models() {
+export default function Atelier() {
   return (
     <article>
           

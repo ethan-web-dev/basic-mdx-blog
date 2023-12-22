@@ -21,7 +21,7 @@ export default function RootLayout({
         <ScreenWidthProvider>
           <NextThemeProvider>
             <Header />
-              <main className="min-h-screen pt-2 sm:pt-24 px-2 md:mx-[10%]">
+              <main className="min-h-screen pt-2 sm:pt-24 mx-2 md:mx-[10%]">
                 {children}
               </main>
             <Footer />

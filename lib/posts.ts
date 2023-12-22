@@ -1,5 +1,4 @@
 import { compileMDX } from 'next-mdx-remote/rsc'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib'
 import rehypeHighlight from 'rehype-highlight/lib'
 import rehypeSlug from 'rehype-slug'
 import Video from '@/app/(interstitials)/components/reusable/Video'
@@ -38,11 +37,8 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
       parseFrontmatter: true,
         mdxOptions: {
           rehypePlugins: [
-          rehypeHighlight,
+          
           rehypeSlug,
-          [rehypeAutolinkHeadings, {
-            behavior: 'wrap'
-          }],
         ],
       },
     }

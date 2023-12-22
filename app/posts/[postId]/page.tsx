@@ -52,21 +52,21 @@ export default async function Post({ params: { postId } }: Props) {
 
   return (
     <>
-      <h2 className="text-4xl font-bold">{meta.title}</h2>
-      <p className="ml-3 mt-2 text-sm text-start w-fit border px-1 rounded-sm">
-        Published: {pubDate}
+      <h2 className="text-4xl font-thin mt-12">{meta.title}</h2>
+      <p className="ml-3 mt-5 text-xs text-start flex flex-col px-1.5 py-0.5 bg-secondary text-primary dark:bg-primary dark:text-secondary rounded-sm max-w-fit">
+        <span>Published: {pubDate}</span>
       </p>
-      <article className="prose dark:prose-invert min-h-screen">
+      <article className="self-center prose dark:prose-invert mt-16 mb-28 max-w-fit md:mx-3">
         {content}
       </article>
-      <section className="pb-20 flex flex-col gap-4">
+      <section className="mb-20 flex flex-col gap-4">
         <p className="text-center">Read similar articles to <span className="italic">{meta.title}</span> based on  common topics:</p>
-        <div className="flex flex-wrap gap-4 w-fit justify-center self-center p-6">
+        <div className="flex flex-wrap gap-4 w-fit justify-center self-center my-6 mx-20 text-sm">
           {tags}
         </div>
       </section>
       <p className="mb-10">
-        <Link href="/articles">← Back to Articles</Link>
+        <Link className="hover:underline" href="/articles">← Back to Articles</Link>
       </p>
     </>
   )

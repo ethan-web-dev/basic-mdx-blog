@@ -54,7 +54,7 @@ export default function FooterMenu() {
 
   const listStyle = "text-sm pl-2 pt-2 flex flex-col gap-1"  
   const containerStyle = "pl-[3%] sm:pl-[20%] lg:pl-[3%] flex flex-col w-fit col-span-1 row-span-1"
-  const headingFour = "text-lg md:text-md"
+  const headingFour = "text-lg font-extralight"
   const linkLabel = "whitespace-nowrap"
 
   return (
@@ -91,7 +91,7 @@ export default function FooterMenu() {
       </div>
       <div className={containerStyle}>
         <h4 className={headingFour}>The Platform</h4>
-        <div className="pl-2 pt-3 flex flex-col gap-3">
+        <div className="pl-2 pt-3 flex flex-col gap-5">
           <div className="flex flex-col gap-1.5 w-fit">
             <p className="text-sm md:text-xs">Built With</p>
             <Image alt='Next.js Logo' className="h-3 w-auto pl-2.5 dark:invert" src={NextjsLogo} />

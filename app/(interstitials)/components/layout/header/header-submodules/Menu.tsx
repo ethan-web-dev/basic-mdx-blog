@@ -87,7 +87,7 @@ function Menu() {
                 <div className="flex flex-col w-fit">
                   <Links 
                     activeRoute='visible' 
-                    className="w-fit"
+                    className="w-fit text-lg font-extralight"
                     linkClicked={handleMobileLinkClick}
                   />
                 </div>
@@ -104,10 +104,9 @@ function Menu() {
       );
     } else {
       return ( /* --- Desktop Menu --- */
-        <nav className="flex gap-5">
+        <nav className="flex gap-8 mr-7">
           <Links 
-            activeRoute='hidden' 
-            className="" 
+            activeRoute='hidden'  
           />
         </nav>
       );

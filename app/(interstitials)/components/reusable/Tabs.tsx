@@ -10,14 +10,14 @@ interface Tab {
 
 const Tab = ({ label, onClick, active }: Tab) => {
   return (
-    <button onClick={onClick}>
+    <button className="px-1 rounded-md bg-primary-accent text-secondary dark:bg-secondary-accent dark:text-primary" onClick={onClick}>
       {label}
     </button>
   )
 }
 
 interface TabContent {
-  content: string;
+  content: React.ReactNode;
 }
 
 const TabContent = ({ content }: TabContent) => {
@@ -25,7 +25,7 @@ const TabContent = ({ content }: TabContent) => {
 }
 
 interface Tabs {
-  tabs: { label: string; content: string }[];
+  tabs: { label: string; content: React.ReactNode; }[];
 }
 
 export const Tabs = ({ tabs }: Tabs) => {
@@ -36,8 +36,8 @@ export const Tabs = ({ tabs }: Tabs) => {
   }
 
   return (
-    <div>
-      <div className="flex">
+    <>
+      <div className="mx-2 flex gap-3">
         {tabs.map((tab, index) => (
           <Tab
             key={index}
@@ -47,9 +47,9 @@ export const Tabs = ({ tabs }: Tabs) => {
           />
         ))}
       </div>
-      <div className="">
+      <div className="mx-6">
         <TabContent content={tabs[activeTab].content} />
       </div>
-    </div>
+    </>
   )
 }
