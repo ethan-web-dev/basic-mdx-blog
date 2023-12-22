@@ -24,7 +24,7 @@ const ThemeSwitchSelect = () => {
 
   return (
     <select 
-      className="h-5 w-16 text-xs rounded-sm border"
+      className="h-6 w-18 text-xs rounded-sm bg-primary-accent dark:bg-secondary-accent"
       onChange={e => setTheme(e.target.value)}
       value={theme} 
     >  

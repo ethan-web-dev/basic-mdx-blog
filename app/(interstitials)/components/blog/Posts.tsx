@@ -10,7 +10,7 @@ export default async function Posts() {
 
   return (
     <section>
-      <ul>
+      <ul className="flex flex-col gap-3">
         {posts.map(post => (
           <ListItem key={post.id} post={post} />
         ))}
